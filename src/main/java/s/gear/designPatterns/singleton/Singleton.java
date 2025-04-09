@@ -1,25 +1,19 @@
 package s.gear.designPatterns.singleton;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-
-public final class Singleton {
-    private static Singleton instance;
+@Component
+public class Singleton {
     public String value;
 
-    private Singleton(String value) {
-        // The following code emulates slow initialization.
+    public Singleton(@Value("${singleton.value:DEFAULT}") String value) {
+        // Simulate slow initialization
         try {
             Thread.sleep(1000);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
         this.value = value;
-    }
-
-    public static Singleton getInstance(String value) {
-        if (instance == null) {
-            instance = new Singleton(value);
-        }
-        return instance;
     }
 }

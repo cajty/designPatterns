@@ -15,9 +15,11 @@ public class DemoFactory {
         GUIFactory factory;
         String osName = System.getProperty("os.name").toLowerCase();
         if (osName.contains("mac")) {
-            factory = new MacOSFactory();
-        } else {
             factory = new WindowsFactory();
+
+        } else {
+            factory = new MacOSFactory();
+
         }
         app = new Application(factory);
         return app;
