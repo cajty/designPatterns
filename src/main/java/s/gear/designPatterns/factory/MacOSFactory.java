@@ -11,8 +11,4 @@ public class MacOSFactory implements GUIFactory {
         return new MacOSButton();
     }
 
-    @Override
-    public Checkbox createCheckbox() {
-        return new MacOSCheckbox();
-    }
 }
