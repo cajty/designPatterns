@@ -3,8 +3,12 @@ package s.gear.designPatterns.observer;
 
 
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 
+
+@Component
 public class Editor {
     public EventManager events;
     private File file;

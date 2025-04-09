@@ -1,10 +1,13 @@
 package s.gear.designPatterns.observer;
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class EventManager {
     Map<String, List<EventListener>> listeners = new HashMap<>();

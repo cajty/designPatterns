@@ -1,9 +1,13 @@
 package s.gear.designPatterns.adapter;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Somewhere in client code...
  */
-public class Demo {
+@SpringBootApplication
+public class DemoAdapter {
+
     public static void main(String[] args) {
         // Round fits round, no surprise.
         RoundHole hole = new RoundHole(5);
