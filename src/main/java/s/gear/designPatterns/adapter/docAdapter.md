@@ -1,22 +1,25 @@
-## Problem
+## Observer Pattern
+**Category**: Behavioral
 
-## Solution
+**Definition**: The Observer pattern establishes a one-to-many relationship between objects, where when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
 
-## use case
+**Problem**:
+- How to establish relationships between objects at runtime
+- How to notify dependent objects when changes occur
 
-adapter
-## structural design pattern:
-    == composition or how use one another
+**Solution**:
+- Define a subject that maintains a list of observers
+- When the subject changes, it notifies all observers
+- Observers react to the notification with appropriate behavior
 
-## abstract: that logic of that transformation
+**Implementation Components**:
+- `EventListener` interface: Defines the update method that observers must implement
+- `EventManager`: Subject that maintains a list of observers and notifies them
+- `Editor`: Contains the core functionality and uses EventManager to notify observers
+- Concrete observers: `LogOpenListener` and `EmailNotificationListener`
 
-## warps: that adapter(class or object)
-            warp that class(to change)
-                in constracter()
-
-## conversion:
-
-
-
-
-
+**Use Case**:
+The Observer pattern is useful when:
+- Changes to one object require changing others, and you don't know how many objects need to change
+- An object needs to notify other objects without making assumptions about what those objects are
+- A subject needs to notify observers without coupling to their concrete classes

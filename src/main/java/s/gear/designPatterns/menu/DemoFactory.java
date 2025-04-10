@@ -27,7 +27,7 @@ public class DemoFactory {
         registerDemo(2, new AdapterDemo());
         registerDemo(3, new FactoryDemo());
         registerDemo(4, new SingletonDemo());
-        // Add more patterns as needed
+        // to add
     }
 
     private void registerDemo(int option, PatternDemo demo) {
